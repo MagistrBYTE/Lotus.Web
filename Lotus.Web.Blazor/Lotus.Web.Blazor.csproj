@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Lotus.Web</RootNamespace>
@@ -11,9 +11,9 @@
     <Authors>MagisterBYTE aka DanielDem</Authors>
     <Company>LotusPlatform</Company>
     <Copyright>MagisterBYTE aka DanielDem</Copyright>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
-    <Version>4.0.0</Version>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <Version>5.0.0</Version>
     <Title>Lotus.Web.Blazor</Title>
     <PackageTags></PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -35,9 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.5" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.5" />
-    <PackageReference Include="System.Net.Http.Json" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="10.0.0" />
   </ItemGroup>
 
 </Project>
