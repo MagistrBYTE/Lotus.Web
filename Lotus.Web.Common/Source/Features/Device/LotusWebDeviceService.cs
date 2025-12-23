@@ -5,7 +5,7 @@ namespace Lotus.Web
     /** \addtogroup WebCommonDevice
 	*@{*/
     /// <summary>
-    /// Cервис для работы с устройством входа.
+    /// Сервис для работы с устройством входа.
     /// </summary>
     public class DeviceService : ILotusDeviceService
     {

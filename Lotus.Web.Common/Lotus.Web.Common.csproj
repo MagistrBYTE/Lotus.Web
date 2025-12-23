@@ -22,7 +22,7 @@
     <PackageIcon>IconTemplate.png</PackageIcon>
     <PackageIconUrl />
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <NoWarn>1587,1591</NoWarn>
+    <NoWarn>1587,1591,IL2121,NU1510</NoWarn>
     <OutputType>Library</OutputType>
     <IsPackable>true</IsPackable>
   </PropertyGroup>

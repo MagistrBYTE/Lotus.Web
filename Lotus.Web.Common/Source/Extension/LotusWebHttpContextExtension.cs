@@ -1,6 +1,8 @@
 using System.Net.Http.Headers;
 using System.Text.Json;
 
+using Lotus.Core;
+
 using Microsoft.Net.Http.Headers;
 
 using UAParser;
@@ -46,7 +48,7 @@ namespace Lotus.Web
         /// </summary>
         /// <param name="httpContext">Контекст запроса.</param>
         /// <param name="headerKey">Имя заголовка.</param>
-        /// <returns>Значение указанного заголовка или значение по умолчанию.</returns>
+        /// <returns>Значение указанного заголовка или null</returns>
         public static string? GetRequestHeaderValue(this HttpContext httpContext, string headerKey)
         {
             if (httpContext.Request.Headers.TryGetValue(headerKey, out var values))
@@ -55,6 +57,25 @@ namespace Lotus.Web
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Получение значение указанного заголовка из запроса.
+        /// </summary>
+        /// <param name="httpContext">Контекст запроса.</param>
+        /// <param name="headerKey">Имя заголовка.</param>
+        /// <param name="defaultValue">Значение по умолчанию.</param>
+        /// <returns>Значение указанного заголовка или значение по умолчанию.</returns>
+        public static bool GetRequestHeaderValueAsBool(this HttpContext httpContext, string headerKey, 
+            bool defaultValue = false)
+        {
+            if (httpContext.Request.Headers.TryGetValue(headerKey, out var values))
+            {
+                var value = values.FirstOrDefault() ?? string.Empty;
+                return XBooleanConverter.Parse(value);
+            }
+
+            return defaultValue;
         }
 
         /// <summary>

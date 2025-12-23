@@ -26,7 +26,7 @@ namespace Lotus.Web
         /// </summary>
         /// <param name="response">Базовый интерфейс получения данных.</param>
         /// <returns>Ответ.</returns>
-        protected IActionResult SendResponse(ILotusResponse response)
+        protected virtual IActionResult SendResponse(ILotusResponse response)
         {
             if (response == null)
             {
@@ -40,9 +40,9 @@ namespace Lotus.Web
 
             if (response.Result!.Succeeded)
             {
-                if (response.Result is ILotusResultHttp resultHttp)
+                if (response.Result.HttpCode.HasValue)
                 {
-                    switch (resultHttp.HttpCode)
+                    switch (response.Result.HttpCode)
                     {
                         case HttpStatusCode.Created: return Created("", response);
                         case HttpStatusCode.NoContent: return NoContent();
@@ -56,9 +56,9 @@ namespace Lotus.Web
             }
             else
             {
-                if (response.Result is ILotusResultHttp resultHttp)
+                if (response.Result.HttpCode.HasValue)
                 {
-                    switch (resultHttp.HttpCode)
+                    switch (response.Result.HttpCode)
                     {
                         case HttpStatusCode.NotFound: return NotFound(response);
                         case HttpStatusCode.Forbidden: return Forbid();
