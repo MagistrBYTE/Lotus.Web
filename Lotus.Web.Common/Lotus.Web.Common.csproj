@@ -11,9 +11,9 @@
     <Authors>MagisterBYTE aka DanielDem</Authors>
     <Company>LotusPlatform</Company>
     <Copyright>MagisterBYTE aka DanielDem</Copyright>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <FileVersion>5.0.0.0</FileVersion>
-    <Version>5.0.0</Version>
+    <AssemblyVersion>5.1.0.0</AssemblyVersion>
+    <FileVersion>5.1.0.0</FileVersion>
+    <Version>5.1.0</Version>
     <Title>Lotus.Web.Common</Title>
     <PackageTags></PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -40,8 +40,8 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Publish'">
-    <PackageReference Include="Lotus.Core" Version="5.0.0" />
-    <PackageReference Include="Lotus.Repository" Version="5.0.0" />
+    <PackageReference Include="Lotus.Core" Version="5.1.0" />
+    <PackageReference Include="Lotus.Repository" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' != 'Publish'">
@@ -50,10 +50,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="10.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Net.Http.Json" Version="10.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="10.0.3" />
     <PackageReference Include="UAParser" Version="3.1.47" />
   </ItemGroup>
 

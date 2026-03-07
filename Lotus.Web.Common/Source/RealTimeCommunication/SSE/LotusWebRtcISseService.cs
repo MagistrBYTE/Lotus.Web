@@ -25,6 +25,6 @@ namespace Lotus.Web
         /// </summary>
         /// <param name="context">Контекст запроса.</param>
         /// <returns>Уникальный идентификатор соединения.</returns>
-        string GetConnectionId(HttpContext context);
+        string GetUserId(HttpContext context);
     }
 }

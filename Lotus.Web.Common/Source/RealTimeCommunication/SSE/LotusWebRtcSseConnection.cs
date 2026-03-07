@@ -14,5 +14,10 @@
         /// Токен отмены.
         /// </summary>
         public CancellationTokenSource Cancel { get; init; } = null!;
+
+        /// <summary>
+        /// ID пользователя.
+        /// </summary>
+        public string UserId { get; set; }
     }
 }
